@@ -1,0 +1,64 @@
+# Sample input for PagesDownloader: one URL per line.
+# Blank lines and lines starting with '#' are ignored.
+
+# --- Regular pages (39) ---
+https://example.com
+https://example.org
+https://example.net
+https://www.iana.org/domains/reserved
+https://www.iana.org/protocols
+https://en.wikipedia.org/wiki/Web_page
+https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+https://en.wikipedia.org/wiki/Asynchronous_I/O
+https://www.w3.org/
+https://www.w3.org/TR/
+https://www.rfc-editor.org/rfc/rfc3986
+https://www.rfc-editor.org/rfc/rfc9110
+https://developer.mozilla.org/en-US/docs/Web/HTTP
+https://developer.mozilla.org/en-US/docs/Web/HTML
+https://learn.microsoft.com/en-us/dotnet/
+https://learn.microsoft.com/en-us/dotnet/csharp/
+https://dotnet.microsoft.com/en-us/
+https://www.nuget.org/
+https://github.com/dotnet/runtime
+https://github.com/dotnet/command-line-api
+https://git-scm.com/
+https://curl.se/
+https://www.gnu.org/software/wget/
+https://nginx.org/
+https://httpd.apache.org/
+https://www.sqlite.org/index.html
+https://www.postgresql.org/
+https://www.python.org/
+https://go.dev/
+https://www.rust-lang.org/
+https://nodejs.org/en
+https://www.debian.org/
+https://ubuntu.com/
+https://www.kernel.org/
+https://www.openstreetmap.org/about
+https://archive.org/about/
+https://news.ycombinator.com/
+https://duckduckgo.com/
+https://httpbin.org/html
+
+# --- Edge cases (11) ---
+# HTTP errors: expected status Failed
+https://httpbin.org/status/404
+https://httpbin.org/status/500
+# Slow but within the timeout: expected Succeeded
+https://httpbin.org/delay/3
+# Slow response (httpbin allows at most 10 s): expected Succeeded.
+# To see TimedOut, temporarily lower RequestTimeout below 8 s.
+https://httpbin.org/delay/8
+# Host that cannot be resolved: expected Failed
+https://this-domain-does-not-exist.invalid/
+# Same path, different query: expected two different files
+https://httpbin.org/get?page=1
+https://httpbin.org/get?page=2
+# Duplicates of the first line: expected one download and a warning
+https://example.com
+HTTPS://EXAMPLE.COM/
+# Not http(s) URLs: expected InvalidUrl
+ftp://example.com/file.txt
+not-a-url

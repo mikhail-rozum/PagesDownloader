@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagesDownloader.Console", "PagesDownloader.Console\PagesDownloader.Console.csproj", "{64BDDDBC-79D5-4929-9279-C2AC545D7424}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagesDownloader.Library", "PagesDownloader.Library\PagesDownloader.Library.csproj", "{F7AEFD50-7E05-484D-A466-9BB4DAFB54FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagesDownloader.Tests", "PagesDownloader.Tests\PagesDownloader.Tests.csproj", "{98D59353-41EC-423D-A9F7-328E12B5B966}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64BDDDBC-79D5-4929-9279-C2AC545D7424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64BDDDBC-79D5-4929-9279-C2AC545D7424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64BDDDBC-79D5-4929-9279-C2AC545D7424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64BDDDBC-79D5-4929-9279-C2AC545D7424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7AEFD50-7E05-484D-A466-9BB4DAFB54FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7AEFD50-7E05-484D-A466-9BB4DAFB54FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7AEFD50-7E05-484D-A466-9BB4DAFB54FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7AEFD50-7E05-484D-A466-9BB4DAFB54FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98D59353-41EC-423D-A9F7-328E12B5B966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98D59353-41EC-423D-A9F7-328E12B5B966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98D59353-41EC-423D-A9F7-328E12B5B966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98D59353-41EC-423D-A9F7-328E12B5B966}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
